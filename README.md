@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Getting Started with Movie App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-> Download Zip file and extract it in your local compiler.
+-> open command prompt in project directory and type: ### `npm install`
 
 ## Available Scripts
 
