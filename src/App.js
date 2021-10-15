@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext, useCallback } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
+import Index from "./Components/DiscoverHome/RouterContent/Index";
+
+import "./App.css";
+import DiscoverForm from "./Components/DiscoverForm/DiscoverForm";
+import DiscoverHome from "./Components/DiscoverHome/DiscoverHome";
+
+const Context1 = createContext();
+const Context2 = createContext();
 
 function App() {
+  const [formData, setFormData] = useState("");
+  const [searchData, setSearchData] = useState("");
+
+  const formDataHandler = useCallback((data) => {
+    setFormData(data);
+  }, []);
+
+  const searchDataHandler = useCallback((data) => {
+    setSearchData(data);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context1.Provider value={formData}>
+      <Context2.Provider value={searchData}>
+        <Router>
+          <div className="main-container">
+            <div className="left-container">
+              <DiscoverHome callBackSearchData={searchDataHandler} />
+              <div className="content">
+                <Index />
+              </div>
+            </div>
+            <div className="right-container">
+              <DiscoverForm callBackFormData={formDataHandler} />
+            </div>
+          </div>
+        </Router>
+      </Context2.Provider>
+    </Context1.Provider>
   );
 }
 
+export {Context1, Context2};
 export default App;

@@ -1,0 +1,93 @@
+.discover-form-container {
+  margin: 1.2rem;
+}
+
+.form-box {
+  margin: 1rem;
+}
+
+.year-range {
+  display: flex;
+}
+
+.drop-down {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: rgb(30, 41, 59);
+  color: white;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid gray;
+}
+.drop-down:hover {
+  border: 1px solid white;
+}
+
+.sub-heading {
+  margin-left: 1rem;
+  margin-top: 2.2rem;
+  font-size: 1.2rem;
+  color: rgb(134, 143, 168);
+}
+
+label {
+  color: rgb(134, 143, 168);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.option {
+  /* display: none; */
+  /* position: absolute; */
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.rating i {
+  color: rgb(73, 82, 97);
+  margin-right: 0.3rem;
+  cursor: pointer;
+}
+.rating {
+  margin-top: 0.5rem;
+}
+.rating i:hover {
+  color: gold;
+}
+
+.rating .gold {
+  color: gold;
+}
+.rating .gray {
+  color: rgb(73, 82, 97);
+}
+
+@media(max-width: 800px)
+{
+  .discover-form-container{
+    margin: 0.7rem;
+  }
+  .form-box{
+    margin: 0.8rem;
+  }
+  label{
+    font-size: 0.6rem;
+  }
+  .rating{
+    margin-top: 0.3rem;
+  }
+  .sub-heading{
+    margin-left: 0.6rem;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  }
+  .rating i{
+    font-size: 0.8rem;
+  }
+  .drop-down{
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+  padding: 0.3rem;
+  }
+}

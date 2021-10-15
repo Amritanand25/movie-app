@@ -1,0 +1,38 @@
+.card{
+    width: 15rem;
+    height: 20rem;
+    margin-top: 1rem;
+    margin-bottom: 8rem;
+}
+
+.image img{
+    width: 100%;
+    height: 95%;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title h2{
+    font-size: 1rem;
+    color: rgb(0, 195, 255);
+}
+
+.title h4{
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    color: gray;
+}
+.sub-title{
+    text-align: center;
+}
+
+@media(max-width: 450px){
+    .card{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}
